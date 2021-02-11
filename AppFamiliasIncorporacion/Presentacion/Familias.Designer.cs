@@ -40,7 +40,10 @@
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gtxtSearch = new Guna.UI.WinForms.GunaTextBox();
+            this.gbtnAgregar = new Guna.UI.WinForms.GunaButton();
             this.gdtgFamilias = new Guna.UI.WinForms.GunaDataGridView();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gtxtApellidoMTutora = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -52,19 +55,27 @@
             this.gtxtNombreTutora = new Guna.UI.WinForms.GunaTextBox();
             this.gtxtFolioEncuesta = new Guna.UI.WinForms.GunaTextBox();
             this.gtxtCurp = new Guna.UI.WinForms.GunaTextBox();
-            this.gtxtAvisoCobro = new Guna.UI.WinForms.GunaTextBox();
+            this.gtxtFolioAvisoCobro = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.gbtnGuardar = new Guna.UI.WinForms.GunaButton();
+            this.gbtnActualizar = new Guna.UI.WinForms.GunaButton();
+            this.gbtnRegresar = new Guna.UI.WinForms.GunaButton();
+            this.pnlFamilia = new System.Windows.Forms.Panel();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
+            this.gtxtAviso = new Guna.UI.WinForms.GunaTextBox();
+            this.gtxtCris = new Guna.UI.WinForms.GunaTextBox();
+            this.gtxtNoti = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdtgFamilias)).BeginInit();
+            this.pnlFamilia.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -119,9 +130,11 @@
             this.gunaPanel2.BackColor = System.Drawing.Color.White;
             this.gunaPanel2.Controls.Add(this.gunaPictureBox1);
             this.gunaPanel2.Controls.Add(this.gtxtSearch);
+            this.gunaPanel2.Controls.Add(this.gbtnAgregar);
+            this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel2.Location = new System.Drawing.Point(0, 44);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(1200, 67);
+            this.gunaPanel2.Size = new System.Drawing.Size(974, 67);
             this.gunaPanel2.TabIndex = 1;
             // 
             // gunaPictureBox1
@@ -146,7 +159,7 @@
             this.gtxtSearch.FocusedForeColor = System.Drawing.Color.DimGray;
             this.gtxtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.gtxtSearch.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtSearch.Location = new System.Drawing.Point(213, 11);
+            this.gtxtSearch.Location = new System.Drawing.Point(209, 16);
             this.gtxtSearch.Name = "gtxtSearch";
             this.gtxtSearch.PasswordChar = '\0';
             this.gtxtSearch.SelectedText = "";
@@ -155,8 +168,33 @@
             this.gtxtSearch.Text = "Ingresa Dato a Buscar";
             this.gtxtSearch.Click += new System.EventHandler(this.gunaTextBox1_Click);
             // 
+            // gbtnAgregar
+            // 
+            this.gbtnAgregar.AnimationHoverSpeed = 0.07F;
+            this.gbtnAgregar.AnimationSpeed = 0.03F;
+            this.gbtnAgregar.BaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.gbtnAgregar.BorderColor = System.Drawing.Color.Black;
+            this.gbtnAgregar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gbtnAgregar.FocusedColor = System.Drawing.Color.Empty;
+            this.gbtnAgregar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.gbtnAgregar.ForeColor = System.Drawing.Color.White;
+            this.gbtnAgregar.Image = global::AppFamiliasIncorporacion.Properties.Resources.add_48px;
+            this.gbtnAgregar.ImageSize = new System.Drawing.Size(40, 40);
+            this.gbtnAgregar.Location = new System.Drawing.Point(709, 5);
+            this.gbtnAgregar.Name = "gbtnAgregar";
+            this.gbtnAgregar.OnHoverBaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.gbtnAgregar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gbtnAgregar.OnHoverForeColor = System.Drawing.Color.White;
+            this.gbtnAgregar.OnHoverImage = null;
+            this.gbtnAgregar.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnAgregar.Size = new System.Drawing.Size(125, 55);
+            this.gbtnAgregar.TabIndex = 30;
+            this.gbtnAgregar.Text = "Agregar";
+            this.gbtnAgregar.Click += new System.EventHandler(this.gunaButton1_Click);
+            // 
             // gdtgFamilias
             // 
+            this.gdtgFamilias.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.gdtgFamilias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gdtgFamilias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -183,13 +221,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gdtgFamilias.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gdtgFamilias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdtgFamilias.EnableHeadersVisualStyles = false;
             this.gdtgFamilias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gdtgFamilias.Location = new System.Drawing.Point(11, 367);
+            this.gdtgFamilias.Location = new System.Drawing.Point(0, 0);
             this.gdtgFamilias.Name = "gdtgFamilias";
             this.gdtgFamilias.RowHeadersVisible = false;
             this.gdtgFamilias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdtgFamilias.Size = new System.Drawing.Size(951, 224);
+            this.gdtgFamilias.Size = new System.Drawing.Size(974, 465);
             this.gdtgFamilias.TabIndex = 15;
             this.gdtgFamilias.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gdtgFamilias.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -214,308 +253,6 @@
             this.gdtgFamilias.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gdtgFamilias.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaLabel7.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaLabel7.Location = new System.Drawing.Point(34, 210);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(137, 21);
-            this.gunaLabel7.TabIndex = 28;
-            this.gunaLabel7.Text = "Apellido Paterno:";
-            // 
-            // gtxtApellidoMTutora
-            // 
-            this.gtxtApellidoMTutora.BaseColor = System.Drawing.Color.White;
-            this.gtxtApellidoMTutora.BorderColor = System.Drawing.Color.White;
-            this.gtxtApellidoMTutora.BorderSize = 1;
-            this.gtxtApellidoMTutora.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtxtApellidoMTutora.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtxtApellidoMTutora.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.gtxtApellidoMTutora.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.gtxtApellidoMTutora.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gtxtApellidoMTutora.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtApellidoMTutora.Location = new System.Drawing.Point(177, 238);
-            this.gtxtApellidoMTutora.Name = "gtxtApellidoMTutora";
-            this.gtxtApellidoMTutora.PasswordChar = '\0';
-            this.gtxtApellidoMTutora.SelectedText = "";
-            this.gtxtApellidoMTutora.Size = new System.Drawing.Size(253, 34);
-            this.gtxtApellidoMTutora.TabIndex = 25;
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaLabel2.Location = new System.Drawing.Point(78, 125);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(93, 21);
-            this.gunaLabel2.TabIndex = 16;
-            this.gunaLabel2.Text = "Familias  Id:";
-            // 
-            // gunaLabel8
-            // 
-            this.gunaLabel8.AutoSize = true;
-            this.gunaLabel8.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaLabel8.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaLabel8.Location = new System.Drawing.Point(28, 251);
-            this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(143, 21);
-            this.gunaLabel8.TabIndex = 29;
-            this.gunaLabel8.Text = "Apellido Materno:";
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaLabel3.Location = new System.Drawing.Point(493, 125);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(144, 21);
-            this.gunaLabel3.TabIndex = 18;
-            this.gunaLabel3.Text = "Folio Aviso Cobro:";
-            // 
-            // gtxtApellidoPTutora
-            // 
-            this.gtxtApellidoPTutora.BaseColor = System.Drawing.Color.White;
-            this.gtxtApellidoPTutora.BorderColor = System.Drawing.Color.White;
-            this.gtxtApellidoPTutora.BorderSize = 1;
-            this.gtxtApellidoPTutora.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtxtApellidoPTutora.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtxtApellidoPTutora.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.gtxtApellidoPTutora.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.gtxtApellidoPTutora.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gtxtApellidoPTutora.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtApellidoPTutora.Location = new System.Drawing.Point(177, 197);
-            this.gtxtApellidoPTutora.Name = "gtxtApellidoPTutora";
-            this.gtxtApellidoPTutora.PasswordChar = '\0';
-            this.gtxtApellidoPTutora.SelectedText = "";
-            this.gtxtApellidoPTutora.Size = new System.Drawing.Size(253, 34);
-            this.gtxtApellidoPTutora.TabIndex = 24;
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaLabel4.Location = new System.Drawing.Point(519, 243);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(118, 21);
-            this.gunaLabel4.TabIndex = 21;
-            this.gunaLabel4.Text = "Folio Encuesta:";
-            // 
-            // gtxtFamiliaId
-            // 
-            this.gtxtFamiliaId.BaseColor = System.Drawing.Color.White;
-            this.gtxtFamiliaId.BorderColor = System.Drawing.Color.White;
-            this.gtxtFamiliaId.BorderSize = 1;
-            this.gtxtFamiliaId.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtxtFamiliaId.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtxtFamiliaId.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.gtxtFamiliaId.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.gtxtFamiliaId.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gtxtFamiliaId.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtFamiliaId.Location = new System.Drawing.Point(177, 117);
-            this.gtxtFamiliaId.Name = "gtxtFamiliaId";
-            this.gtxtFamiliaId.PasswordChar = '\0';
-            this.gtxtFamiliaId.SelectedText = "";
-            this.gtxtFamiliaId.Size = new System.Drawing.Size(253, 34);
-            this.gtxtFamiliaId.TabIndex = 17;
-            // 
-            // gtxtNombreTutora
-            // 
-            this.gtxtNombreTutora.BaseColor = System.Drawing.Color.White;
-            this.gtxtNombreTutora.BorderColor = System.Drawing.Color.White;
-            this.gtxtNombreTutora.BorderSize = 1;
-            this.gtxtNombreTutora.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtxtNombreTutora.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtxtNombreTutora.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.gtxtNombreTutora.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.gtxtNombreTutora.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gtxtNombreTutora.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtNombreTutora.Location = new System.Drawing.Point(177, 157);
-            this.gtxtNombreTutora.Name = "gtxtNombreTutora";
-            this.gtxtNombreTutora.PasswordChar = '\0';
-            this.gtxtNombreTutora.SelectedText = "";
-            this.gtxtNombreTutora.Size = new System.Drawing.Size(253, 34);
-            this.gtxtNombreTutora.TabIndex = 23;
-            // 
-            // gtxtFolioEncuesta
-            // 
-            this.gtxtFolioEncuesta.BaseColor = System.Drawing.Color.White;
-            this.gtxtFolioEncuesta.BorderColor = System.Drawing.Color.White;
-            this.gtxtFolioEncuesta.BorderSize = 1;
-            this.gtxtFolioEncuesta.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtxtFolioEncuesta.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtxtFolioEncuesta.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.gtxtFolioEncuesta.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.gtxtFolioEncuesta.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gtxtFolioEncuesta.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtFolioEncuesta.Location = new System.Drawing.Point(643, 117);
-            this.gtxtFolioEncuesta.Name = "gtxtFolioEncuesta";
-            this.gtxtFolioEncuesta.PasswordChar = '\0';
-            this.gtxtFolioEncuesta.SelectedText = "";
-            this.gtxtFolioEncuesta.Size = new System.Drawing.Size(319, 34);
-            this.gtxtFolioEncuesta.TabIndex = 19;
-            // 
-            // gtxtCurp
-            // 
-            this.gtxtCurp.BaseColor = System.Drawing.Color.White;
-            this.gtxtCurp.BorderColor = System.Drawing.Color.White;
-            this.gtxtCurp.BorderSize = 1;
-            this.gtxtCurp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtxtCurp.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtxtCurp.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.gtxtCurp.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.gtxtCurp.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gtxtCurp.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtCurp.Location = new System.Drawing.Point(643, 172);
-            this.gtxtCurp.Name = "gtxtCurp";
-            this.gtxtCurp.PasswordChar = '\0';
-            this.gtxtCurp.SelectedText = "";
-            this.gtxtCurp.Size = new System.Drawing.Size(319, 34);
-            this.gtxtCurp.TabIndex = 20;
-            // 
-            // gtxtAvisoCobro
-            // 
-            this.gtxtAvisoCobro.BaseColor = System.Drawing.Color.White;
-            this.gtxtAvisoCobro.BorderColor = System.Drawing.Color.White;
-            this.gtxtAvisoCobro.BorderSize = 1;
-            this.gtxtAvisoCobro.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gtxtAvisoCobro.FocusedBaseColor = System.Drawing.Color.White;
-            this.gtxtAvisoCobro.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.gtxtAvisoCobro.FocusedForeColor = System.Drawing.Color.DimGray;
-            this.gtxtAvisoCobro.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.gtxtAvisoCobro.ForeColor = System.Drawing.Color.Gray;
-            this.gtxtAvisoCobro.Location = new System.Drawing.Point(643, 232);
-            this.gtxtAvisoCobro.Name = "gtxtAvisoCobro";
-            this.gtxtAvisoCobro.PasswordChar = '\0';
-            this.gtxtAvisoCobro.SelectedText = "";
-            this.gtxtAvisoCobro.Size = new System.Drawing.Size(319, 34);
-            this.gtxtAvisoCobro.TabIndex = 22;
-            // 
-            // gunaLabel6
-            // 
-            this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaLabel6.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaLabel6.Location = new System.Drawing.Point(583, 185);
-            this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(54, 21);
-            this.gunaLabel6.TabIndex = 27;
-            this.gunaLabel6.Text = "CURP:";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.BackColor = System.Drawing.Color.Gainsboro;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaLabel5.Location = new System.Drawing.Point(45, 172);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(126, 21);
-            this.gunaLabel5.TabIndex = 26;
-            this.gunaLabel5.Text = "Nombre Tutora:";
-            // 
-            // gunaButton1
-            // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = global::AppFamiliasIncorporacion.Properties.Resources.add_48px;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaButton1.Location = new System.Drawing.Point(305, 303);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(125, 55);
-            this.gunaButton1.TabIndex = 30;
-            this.gunaButton1.Text = "Agregar";
-            // 
-            // gunaButton2
-            // 
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.gunaButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaButton2.Image = global::AppFamiliasIncorporacion.Properties.Resources.icons8_save_as_48px;
-            this.gunaButton2.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaButton2.Location = new System.Drawing.Point(532, 303);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(125, 55);
-            this.gunaButton2.TabIndex = 31;
-            this.gunaButton2.Text = "Guardar";
-            // 
-            // gunaButton3
-            // 
-            this.gunaButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaButton3.AnimationSpeed = 0.03F;
-            this.gunaButton3.BaseColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = global::AppFamiliasIncorporacion.Properties.Resources.icons8_usb_connected_48px;
-            this.gunaButton3.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaButton3.Location = new System.Drawing.Point(65, 303);
-            this.gunaButton3.Name = "gunaButton3";
-            this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton3.OnHoverImage = null;
-            this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Size = new System.Drawing.Size(125, 55);
-            this.gunaButton3.TabIndex = 32;
-            this.gunaButton3.Text = "Actualizar";
-            // 
-            // gunaButton4
-            // 
-            this.gunaButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaButton4.AnimationSpeed = 0.03F;
-            this.gunaButton4.BaseColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaButton4.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.gunaButton4.ForeColor = System.Drawing.Color.White;
-            this.gunaButton4.Image = global::AppFamiliasIncorporacion.Properties.Resources.icons8_back_arrow_48px;
-            this.gunaButton4.ImageSize = new System.Drawing.Size(40, 40);
-            this.gunaButton4.Location = new System.Drawing.Point(761, 303);
-            this.gunaButton4.Name = "gunaButton4";
-            this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton4.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton4.OnHoverImage = null;
-            this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton4.Size = new System.Drawing.Size(125, 55);
-            this.gunaButton4.TabIndex = 33;
-            this.gunaButton4.Text = "Regresar";
-            // 
             // Editar
             // 
             this.Editar.FillWeight = 98.21972F;
@@ -534,45 +271,452 @@
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel7.Location = new System.Drawing.Point(492, 103);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(137, 21);
+            this.gunaLabel7.TabIndex = 28;
+            this.gunaLabel7.Text = "Apellido Paterno:";
+            // 
+            // gtxtApellidoMTutora
+            // 
+            this.gtxtApellidoMTutora.BaseColor = System.Drawing.Color.White;
+            this.gtxtApellidoMTutora.BorderColor = System.Drawing.Color.White;
+            this.gtxtApellidoMTutora.BorderSize = 1;
+            this.gtxtApellidoMTutora.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtApellidoMTutora.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtApellidoMTutora.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtApellidoMTutora.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtApellidoMTutora.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtApellidoMTutora.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtApellidoMTutora.Location = new System.Drawing.Point(635, 131);
+            this.gtxtApellidoMTutora.Name = "gtxtApellidoMTutora";
+            this.gtxtApellidoMTutora.PasswordChar = '\0';
+            this.gtxtApellidoMTutora.SelectedText = "";
+            this.gtxtApellidoMTutora.Size = new System.Drawing.Size(253, 34);
+            this.gtxtApellidoMTutora.TabIndex = 25;
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel2.Location = new System.Drawing.Point(70, 23);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(93, 21);
+            this.gunaLabel2.TabIndex = 16;
+            this.gunaLabel2.Text = "Familias  Id:";
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel8.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel8.Location = new System.Drawing.Point(486, 144);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(143, 21);
+            this.gunaLabel8.TabIndex = 29;
+            this.gunaLabel8.Text = "Apellido Materno:";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel3.Location = new System.Drawing.Point(485, 23);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(144, 21);
+            this.gunaLabel3.TabIndex = 18;
+            this.gunaLabel3.Text = "Folio Aviso Cobro:";
+            // 
+            // gtxtApellidoPTutora
+            // 
+            this.gtxtApellidoPTutora.BaseColor = System.Drawing.Color.White;
+            this.gtxtApellidoPTutora.BorderColor = System.Drawing.Color.White;
+            this.gtxtApellidoPTutora.BorderSize = 1;
+            this.gtxtApellidoPTutora.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtApellidoPTutora.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtApellidoPTutora.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtApellidoPTutora.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtApellidoPTutora.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtApellidoPTutora.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtApellidoPTutora.Location = new System.Drawing.Point(635, 90);
+            this.gtxtApellidoPTutora.Name = "gtxtApellidoPTutora";
+            this.gtxtApellidoPTutora.PasswordChar = '\0';
+            this.gtxtApellidoPTutora.SelectedText = "";
+            this.gtxtApellidoPTutora.Size = new System.Drawing.Size(253, 34);
+            this.gtxtApellidoPTutora.TabIndex = 24;
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel4.Location = new System.Drawing.Point(509, 63);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(118, 21);
+            this.gunaLabel4.TabIndex = 21;
+            this.gunaLabel4.Text = "Folio Encuesta:";
+            // 
+            // gtxtFamiliaId
+            // 
+            this.gtxtFamiliaId.BaseColor = System.Drawing.Color.White;
+            this.gtxtFamiliaId.BorderColor = System.Drawing.Color.White;
+            this.gtxtFamiliaId.BorderSize = 1;
+            this.gtxtFamiliaId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtFamiliaId.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtFamiliaId.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtFamiliaId.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtFamiliaId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtFamiliaId.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtFamiliaId.Location = new System.Drawing.Point(169, 15);
+            this.gtxtFamiliaId.Name = "gtxtFamiliaId";
+            this.gtxtFamiliaId.PasswordChar = '\0';
+            this.gtxtFamiliaId.SelectedText = "";
+            this.gtxtFamiliaId.Size = new System.Drawing.Size(253, 34);
+            this.gtxtFamiliaId.TabIndex = 17;
+            // 
+            // gtxtNombreTutora
+            // 
+            this.gtxtNombreTutora.BaseColor = System.Drawing.Color.White;
+            this.gtxtNombreTutora.BorderColor = System.Drawing.Color.White;
+            this.gtxtNombreTutora.BorderSize = 1;
+            this.gtxtNombreTutora.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtNombreTutora.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtNombreTutora.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtNombreTutora.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtNombreTutora.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtNombreTutora.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtNombreTutora.Location = new System.Drawing.Point(169, 103);
+            this.gtxtNombreTutora.Name = "gtxtNombreTutora";
+            this.gtxtNombreTutora.PasswordChar = '\0';
+            this.gtxtNombreTutora.SelectedText = "";
+            this.gtxtNombreTutora.Size = new System.Drawing.Size(253, 34);
+            this.gtxtNombreTutora.TabIndex = 23;
+            // 
+            // gtxtFolioEncuesta
+            // 
+            this.gtxtFolioEncuesta.BaseColor = System.Drawing.Color.White;
+            this.gtxtFolioEncuesta.BorderColor = System.Drawing.Color.White;
+            this.gtxtFolioEncuesta.BorderSize = 1;
+            this.gtxtFolioEncuesta.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtFolioEncuesta.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtFolioEncuesta.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtFolioEncuesta.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtFolioEncuesta.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtFolioEncuesta.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtFolioEncuesta.Location = new System.Drawing.Point(635, 50);
+            this.gtxtFolioEncuesta.Name = "gtxtFolioEncuesta";
+            this.gtxtFolioEncuesta.PasswordChar = '\0';
+            this.gtxtFolioEncuesta.SelectedText = "";
+            this.gtxtFolioEncuesta.Size = new System.Drawing.Size(319, 34);
+            this.gtxtFolioEncuesta.TabIndex = 19;
+            // 
+            // gtxtCurp
+            // 
+            this.gtxtCurp.BaseColor = System.Drawing.Color.White;
+            this.gtxtCurp.BorderColor = System.Drawing.Color.White;
+            this.gtxtCurp.BorderSize = 1;
+            this.gtxtCurp.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtCurp.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtCurp.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtCurp.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtCurp.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtCurp.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtCurp.Location = new System.Drawing.Point(169, 60);
+            this.gtxtCurp.Name = "gtxtCurp";
+            this.gtxtCurp.PasswordChar = '\0';
+            this.gtxtCurp.SelectedText = "";
+            this.gtxtCurp.Size = new System.Drawing.Size(253, 34);
+            this.gtxtCurp.TabIndex = 20;
+            // 
+            // gtxtFolioAvisoCobro
+            // 
+            this.gtxtFolioAvisoCobro.BaseColor = System.Drawing.Color.White;
+            this.gtxtFolioAvisoCobro.BorderColor = System.Drawing.Color.White;
+            this.gtxtFolioAvisoCobro.BorderSize = 1;
+            this.gtxtFolioAvisoCobro.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtFolioAvisoCobro.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtFolioAvisoCobro.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtFolioAvisoCobro.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtFolioAvisoCobro.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtFolioAvisoCobro.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtFolioAvisoCobro.Location = new System.Drawing.Point(635, 10);
+            this.gtxtFolioAvisoCobro.Name = "gtxtFolioAvisoCobro";
+            this.gtxtFolioAvisoCobro.PasswordChar = '\0';
+            this.gtxtFolioAvisoCobro.SelectedText = "";
+            this.gtxtFolioAvisoCobro.Size = new System.Drawing.Size(319, 34);
+            this.gtxtFolioAvisoCobro.TabIndex = 22;
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel6.Location = new System.Drawing.Point(88, 60);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(54, 21);
+            this.gunaLabel6.TabIndex = 27;
+            this.gunaLabel6.Text = "CURP:";
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel5.Location = new System.Drawing.Point(37, 118);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(126, 21);
+            this.gunaLabel5.TabIndex = 26;
+            this.gunaLabel5.Text = "Nombre Tutora:";
+            // 
+            // gbtnGuardar
+            // 
+            this.gbtnGuardar.AnimationHoverSpeed = 0.07F;
+            this.gbtnGuardar.AnimationSpeed = 0.03F;
+            this.gbtnGuardar.BaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.gbtnGuardar.BorderColor = System.Drawing.Color.Black;
+            this.gbtnGuardar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gbtnGuardar.FocusedColor = System.Drawing.Color.Empty;
+            this.gbtnGuardar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.gbtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.gbtnGuardar.Image = global::AppFamiliasIncorporacion.Properties.Resources.icons8_save_as_48px;
+            this.gbtnGuardar.ImageSize = new System.Drawing.Size(40, 40);
+            this.gbtnGuardar.Location = new System.Drawing.Point(130, 298);
+            this.gbtnGuardar.Name = "gbtnGuardar";
+            this.gbtnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gbtnGuardar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gbtnGuardar.OnHoverForeColor = System.Drawing.Color.White;
+            this.gbtnGuardar.OnHoverImage = null;
+            this.gbtnGuardar.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnGuardar.Size = new System.Drawing.Size(125, 55);
+            this.gbtnGuardar.TabIndex = 31;
+            this.gbtnGuardar.Text = "Guardar";
+            this.gbtnGuardar.Click += new System.EventHandler(this.gbtnGuardar_Click);
+            // 
+            // gbtnActualizar
+            // 
+            this.gbtnActualizar.AnimationHoverSpeed = 0.07F;
+            this.gbtnActualizar.AnimationSpeed = 0.03F;
+            this.gbtnActualizar.BaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.gbtnActualizar.BorderColor = System.Drawing.Color.Black;
+            this.gbtnActualizar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gbtnActualizar.FocusedColor = System.Drawing.Color.Empty;
+            this.gbtnActualizar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.gbtnActualizar.ForeColor = System.Drawing.Color.White;
+            this.gbtnActualizar.Image = global::AppFamiliasIncorporacion.Properties.Resources.icons8_usb_connected_48px;
+            this.gbtnActualizar.ImageSize = new System.Drawing.Size(40, 40);
+            this.gbtnActualizar.Location = new System.Drawing.Point(402, 298);
+            this.gbtnActualizar.Name = "gbtnActualizar";
+            this.gbtnActualizar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gbtnActualizar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gbtnActualizar.OnHoverForeColor = System.Drawing.Color.White;
+            this.gbtnActualizar.OnHoverImage = null;
+            this.gbtnActualizar.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnActualizar.Size = new System.Drawing.Size(125, 55);
+            this.gbtnActualizar.TabIndex = 32;
+            this.gbtnActualizar.Text = "Actualizar";
+            // 
+            // gbtnRegresar
+            // 
+            this.gbtnRegresar.AnimationHoverSpeed = 0.07F;
+            this.gbtnRegresar.AnimationSpeed = 0.03F;
+            this.gbtnRegresar.BaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.gbtnRegresar.BorderColor = System.Drawing.Color.Black;
+            this.gbtnRegresar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gbtnRegresar.FocusedColor = System.Drawing.Color.Empty;
+            this.gbtnRegresar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.gbtnRegresar.ForeColor = System.Drawing.Color.White;
+            this.gbtnRegresar.Image = global::AppFamiliasIncorporacion.Properties.Resources.icons8_back_arrow_48px;
+            this.gbtnRegresar.ImageSize = new System.Drawing.Size(40, 40);
+            this.gbtnRegresar.Location = new System.Drawing.Point(663, 298);
+            this.gbtnRegresar.Name = "gbtnRegresar";
+            this.gbtnRegresar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gbtnRegresar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gbtnRegresar.OnHoverForeColor = System.Drawing.Color.White;
+            this.gbtnRegresar.OnHoverImage = null;
+            this.gbtnRegresar.OnPressedColor = System.Drawing.Color.Black;
+            this.gbtnRegresar.Size = new System.Drawing.Size(125, 55);
+            this.gbtnRegresar.TabIndex = 33;
+            this.gbtnRegresar.Text = "Regresar";
+            this.gbtnRegresar.Click += new System.EventHandler(this.gbtnRegresar_Click);
+            // 
+            // pnlFamilia
+            // 
+            this.pnlFamilia.Controls.Add(this.gtxtFolioEncuesta);
+            this.pnlFamilia.Controls.Add(this.gunaLabel11);
+            this.pnlFamilia.Controls.Add(this.gunaLabel10);
+            this.pnlFamilia.Controls.Add(this.gunaLabel9);
+            this.pnlFamilia.Controls.Add(this.gtxtAviso);
+            this.pnlFamilia.Controls.Add(this.gtxtCris);
+            this.pnlFamilia.Controls.Add(this.gtxtNoti);
+            this.pnlFamilia.Controls.Add(this.gunaLabel2);
+            this.pnlFamilia.Controls.Add(this.gbtnRegresar);
+            this.pnlFamilia.Controls.Add(this.gunaLabel5);
+            this.pnlFamilia.Controls.Add(this.gbtnActualizar);
+            this.pnlFamilia.Controls.Add(this.gunaLabel6);
+            this.pnlFamilia.Controls.Add(this.gbtnGuardar);
+            this.pnlFamilia.Controls.Add(this.gtxtFolioAvisoCobro);
+            this.pnlFamilia.Controls.Add(this.gunaLabel7);
+            this.pnlFamilia.Controls.Add(this.gtxtCurp);
+            this.pnlFamilia.Controls.Add(this.gtxtApellidoMTutora);
+            this.pnlFamilia.Controls.Add(this.gtxtNombreTutora);
+            this.pnlFamilia.Controls.Add(this.gunaLabel8);
+            this.pnlFamilia.Controls.Add(this.gtxtFamiliaId);
+            this.pnlFamilia.Controls.Add(this.gunaLabel3);
+            this.pnlFamilia.Controls.Add(this.gunaLabel4);
+            this.pnlFamilia.Controls.Add(this.gtxtApellidoPTutora);
+            this.pnlFamilia.Location = new System.Drawing.Point(3, 45);
+            this.pnlFamilia.Name = "pnlFamilia";
+            this.pnlFamilia.Size = new System.Drawing.Size(968, 399);
+            this.pnlFamilia.TabIndex = 34;
+            this.pnlFamilia.Visible = false;
+            // 
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel11.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel11.Location = new System.Drawing.Point(618, 257);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(93, 21);
+            this.gunaLabel11.TabIndex = 39;
+            this.gunaLabel11.Text = "Obs.AVISO:";
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.AutoSize = true;
+            this.gunaLabel10.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel10.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel10.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel10.Location = new System.Drawing.Point(308, 257);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(84, 21);
+            this.gunaLabel10.TabIndex = 38;
+            this.gunaLabel10.Text = "Obs.NOTI:";
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.BackColor = System.Drawing.Color.Gainsboro;
+            this.gunaLabel9.Font = new System.Drawing.Font("Segoe WP Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaLabel9.Location = new System.Drawing.Point(23, 257);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(81, 21);
+            this.gunaLabel9.TabIndex = 37;
+            this.gunaLabel9.Text = "Obs.CRIS:";
+            // 
+            // gtxtAviso
+            // 
+            this.gtxtAviso.BaseColor = System.Drawing.Color.White;
+            this.gtxtAviso.BorderColor = System.Drawing.Color.White;
+            this.gtxtAviso.BorderSize = 1;
+            this.gtxtAviso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtAviso.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtAviso.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtAviso.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtAviso.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtAviso.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtAviso.Location = new System.Drawing.Point(711, 244);
+            this.gtxtAviso.Name = "gtxtAviso";
+            this.gtxtAviso.PasswordChar = '\0';
+            this.gtxtAviso.SelectedText = "";
+            this.gtxtAviso.Size = new System.Drawing.Size(253, 34);
+            this.gtxtAviso.TabIndex = 36;
+            // 
+            // gtxtCris
+            // 
+            this.gtxtCris.BaseColor = System.Drawing.Color.White;
+            this.gtxtCris.BorderColor = System.Drawing.Color.White;
+            this.gtxtCris.BorderSize = 1;
+            this.gtxtCris.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtCris.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtCris.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtCris.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtCris.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtCris.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtCris.Location = new System.Drawing.Point(106, 244);
+            this.gtxtCris.Name = "gtxtCris";
+            this.gtxtCris.PasswordChar = '\0';
+            this.gtxtCris.SelectedText = "";
+            this.gtxtCris.Size = new System.Drawing.Size(199, 34);
+            this.gtxtCris.TabIndex = 35;
+            // 
+            // gtxtNoti
+            // 
+            this.gtxtNoti.BaseColor = System.Drawing.Color.White;
+            this.gtxtNoti.BorderColor = System.Drawing.Color.White;
+            this.gtxtNoti.BorderSize = 1;
+            this.gtxtNoti.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gtxtNoti.FocusedBaseColor = System.Drawing.Color.White;
+            this.gtxtNoti.FocusedBorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.gtxtNoti.FocusedForeColor = System.Drawing.Color.DimGray;
+            this.gtxtNoti.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.gtxtNoti.ForeColor = System.Drawing.Color.Gray;
+            this.gtxtNoti.Location = new System.Drawing.Point(393, 244);
+            this.gtxtNoti.Name = "gtxtNoti";
+            this.gtxtNoti.PasswordChar = '\0';
+            this.gtxtNoti.SelectedText = "";
+            this.gtxtNoti.Size = new System.Drawing.Size(225, 34);
+            this.gtxtNoti.TabIndex = 34;
+            // 
+            // gunaPanel3
+            // 
+            this.gunaPanel3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gunaPanel3.Location = new System.Drawing.Point(0, 575);
+            this.gunaPanel3.Name = "gunaPanel3";
+            this.gunaPanel3.Size = new System.Drawing.Size(974, 28);
+            this.gunaPanel3.TabIndex = 35;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pnlFamilia);
+            this.panel1.Controls.Add(this.gdtgFamilias);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 111);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(974, 465);
+            this.panel1.TabIndex = 36;
+            // 
             // Familias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(974, 603);
-            this.Controls.Add(this.gunaButton4);
-            this.Controls.Add(this.gunaButton3);
-            this.Controls.Add(this.gunaButton2);
-            this.Controls.Add(this.gunaButton1);
-            this.Controls.Add(this.gunaLabel7);
-            this.Controls.Add(this.gtxtApellidoMTutora);
-            this.Controls.Add(this.gunaLabel2);
-            this.Controls.Add(this.gunaLabel8);
-            this.Controls.Add(this.gunaLabel3);
-            this.Controls.Add(this.gtxtApellidoPTutora);
-            this.Controls.Add(this.gunaLabel4);
-            this.Controls.Add(this.gtxtFamiliaId);
-            this.Controls.Add(this.gtxtNombreTutora);
-            this.Controls.Add(this.gtxtFolioEncuesta);
-            this.Controls.Add(this.gtxtCurp);
-            this.Controls.Add(this.gtxtAvisoCobro);
-            this.Controls.Add(this.gunaLabel6);
-            this.Controls.Add(this.gunaLabel5);
-            this.Controls.Add(this.gdtgFamilias);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.gunaPanel3);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Familias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Familias";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Familias_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.gunaPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdtgFamilias)).EndInit();
+            this.pnlFamilia.ResumeLayout(false);
+            this.pnlFamilia.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -597,14 +741,23 @@
         private Guna.UI.WinForms.GunaTextBox gtxtNombreTutora;
         private Guna.UI.WinForms.GunaTextBox gtxtFolioEncuesta;
         private Guna.UI.WinForms.GunaTextBox gtxtCurp;
-        private Guna.UI.WinForms.GunaTextBox gtxtAvisoCobro;
+        private Guna.UI.WinForms.GunaTextBox gtxtFolioAvisoCobro;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaButton gunaButton4;
-        private Guna.UI.WinForms.GunaButton gunaButton3;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton gbtnRegresar;
+        private Guna.UI.WinForms.GunaButton gbtnActualizar;
+        private Guna.UI.WinForms.GunaButton gbtnGuardar;
+        private Guna.UI.WinForms.GunaButton gbtnAgregar;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.Panel pnlFamilia;
+        private Guna.UI.WinForms.GunaPanel gunaPanel3;
+        private Guna.UI.WinForms.GunaLabel gunaLabel11;
+        private Guna.UI.WinForms.GunaLabel gunaLabel10;
+        private Guna.UI.WinForms.GunaLabel gunaLabel9;
+        private Guna.UI.WinForms.GunaTextBox gtxtAviso;
+        private Guna.UI.WinForms.GunaTextBox gtxtCris;
+        private Guna.UI.WinForms.GunaTextBox gtxtNoti;
+        private System.Windows.Forms.Panel panel1;
     }
 }
