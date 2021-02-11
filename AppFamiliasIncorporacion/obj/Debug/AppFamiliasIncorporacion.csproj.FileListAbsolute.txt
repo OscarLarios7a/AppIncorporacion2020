@@ -1,1 +1,10 @@
 D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\bin\Debug\AppFamiliasIncorporacion.exe.config
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\bin\Debug\AppFamiliasIncorporacion.exe
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\bin\Debug\AppFamiliasIncorporacion.pdb
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\bin\Debug\Guna.UI.dll
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\obj\Debug\AppFamiliasIncorporacion.csprojResolveAssemblyReference.cache
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\obj\Debug\AppFamiliasIncorporacion.Properties.Resources.resources
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\obj\Debug\AppFamiliasIncorporacion.csproj.GenerateResource.Cache
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\obj\Debug\AppFamiliasIncorporacion.exe
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\obj\Debug\AppFamiliasIncorporacion.pdb
+D:\AT_OAXACA\Documents\Visual Studio 2015\Projects\AppFamiliasIncorporacion\AppFamiliasIncorporacion\obj\Debug\AppFamiliasIncorporacion.Presentacion.Familias.resources
