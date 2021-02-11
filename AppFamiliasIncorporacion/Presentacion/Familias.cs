@@ -27,7 +27,7 @@ namespace AppFamiliasIncorporacion.Presentacion
             gtxtSearch.Text = null;
         }
 
-        private void gunaLabel3_Click(object sender, EventArgs e)
+        private void Familias_Load(object sender, EventArgs e)
         {
 
         }
