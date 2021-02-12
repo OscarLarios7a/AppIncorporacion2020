@@ -85,7 +85,29 @@ namespace AppFamiliasIncorporacion.Presentacion
 
 
         }
+        //Metodo para Eliminar los Datos en la DB
+        private void eliminar_Familia()
+        {
+            lFamIncorporacion dtFamilia = new lFamIncorporacion();
+            dFamilias metodos = new dFamilias();
+            dtFamilia.idIncorporacion = idIncorporacion;
+            if (metodos.EliminarDB(dtFamilia))
+            {
+                MessageBox.Show("Familia Eliminada", "Eliminacion Correcto");
+               pnlFamilia.Visible = false;
+                pnlFamilia.Dock = DockStyle.None;
+            }
+        }
+        //Metodo para Buscar los Datos en la DB
+        private void buscar_Familia(string buscar)
+        {
 
+            DataTable dtFamilia;
+            dFamilias metodos = new dFamilias();
+            dtFamilia= metodos.BuscarDB(buscar);
+            gdtgFamilias.DataSource = dtFamilia;
+           
+        }
 
         /*** FIN DE METODOS   ***/
         private void bntExit_Click(object sender, EventArgs e)
@@ -154,7 +176,7 @@ namespace AppFamiliasIncorporacion.Presentacion
         {
             //para obtener el valor de la celda del DatagriView
             idIncorporacion = Convert.ToInt32(gdtgFamilias.SelectedCells[2].Value.ToString());
-            //Validacion de la celda
+            //Validacion de la celda para Editar 
             if (e.ColumnIndex == this.gdtgFamilias.Columns["Editar"].Index)
             {
                 gtxtFamiliaId.Text = gdtgFamilias.SelectedCells[3].Value.ToString();
@@ -173,6 +195,23 @@ namespace AppFamiliasIncorporacion.Presentacion
                 gbtnGuardar.Visible = false;
                 gbtnActualizar.Visible = true;
             }
+            //Validacion de la Celda para Eliminar
+            if (e.ColumnIndex == this.gdtgFamilias.Columns["Eliminar"].Index)
+            {
+                DialogResult res;
+                res= MessageBox.Show("¿Quieres Eliminar el Registro?", "Elimando Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (res == DialogResult.OK)
+                {
+                    eliminar_Familia();
+                    vista_Familia();
+                }
+                
+            }
+        }
+
+        private void gtxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            buscar_Familia(gtxtSearch.Text);
         }
     }
 }

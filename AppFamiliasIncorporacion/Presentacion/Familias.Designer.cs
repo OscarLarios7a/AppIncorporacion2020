@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Familias));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.bntExit = new System.Windows.Forms.Button();
@@ -166,6 +166,7 @@
             this.gtxtSearch.Size = new System.Drawing.Size(380, 44);
             this.gtxtSearch.TabIndex = 1;
             this.gtxtSearch.Text = "Ingresa Dato a Buscar";
+            this.gtxtSearch.TextChanged += new System.EventHandler(this.gtxtSearch_TextChanged);
             this.gtxtSearch.Click += new System.EventHandler(this.gunaTextBox1_Click);
             // 
             // gbtnAgregar
@@ -188,39 +189,39 @@
             this.gbtnAgregar.OnHoverImage = null;
             this.gbtnAgregar.OnPressedColor = System.Drawing.Color.Black;
             this.gbtnAgregar.Size = new System.Drawing.Size(125, 55);
-            this.gbtnAgregar.TabIndex = 30;
+            this.gbtnAgregar.TabIndex = 2;
             this.gbtnAgregar.Text = "Agregar";
             this.gbtnAgregar.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // gdtgFamilias
             // 
             this.gdtgFamilias.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gdtgFamilias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.gdtgFamilias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.gdtgFamilias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gdtgFamilias.BackgroundColor = System.Drawing.Color.White;
             this.gdtgFamilias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gdtgFamilias.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gdtgFamilias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gdtgFamilias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gdtgFamilias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gdtgFamilias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Editar,
             this.Eliminar});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gdtgFamilias.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gdtgFamilias.DefaultCellStyle = dataGridViewCellStyle9;
             this.gdtgFamilias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gdtgFamilias.EnableHeadersVisualStyles = false;
             this.gdtgFamilias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -300,7 +301,7 @@
             this.gtxtApellidoMTutora.PasswordChar = '\0';
             this.gtxtApellidoMTutora.SelectedText = "";
             this.gtxtApellidoMTutora.Size = new System.Drawing.Size(253, 34);
-            this.gtxtApellidoMTutora.TabIndex = 25;
+            this.gtxtApellidoMTutora.TabIndex = 9;
             // 
             // gunaLabel2
             // 
@@ -354,7 +355,7 @@
             this.gtxtApellidoPTutora.PasswordChar = '\0';
             this.gtxtApellidoPTutora.SelectedText = "";
             this.gtxtApellidoPTutora.Size = new System.Drawing.Size(253, 34);
-            this.gtxtApellidoPTutora.TabIndex = 24;
+            this.gtxtApellidoPTutora.TabIndex = 8;
             // 
             // gunaLabel4
             // 
@@ -384,7 +385,7 @@
             this.gtxtFamiliaId.PasswordChar = '\0';
             this.gtxtFamiliaId.SelectedText = "";
             this.gtxtFamiliaId.Size = new System.Drawing.Size(253, 34);
-            this.gtxtFamiliaId.TabIndex = 17;
+            this.gtxtFamiliaId.TabIndex = 3;
             // 
             // gtxtNombreTutora
             // 
@@ -402,7 +403,7 @@
             this.gtxtNombreTutora.PasswordChar = '\0';
             this.gtxtNombreTutora.SelectedText = "";
             this.gtxtNombreTutora.Size = new System.Drawing.Size(253, 34);
-            this.gtxtNombreTutora.TabIndex = 23;
+            this.gtxtNombreTutora.TabIndex = 7;
             // 
             // gtxtFolioEncuesta
             // 
@@ -420,7 +421,7 @@
             this.gtxtFolioEncuesta.PasswordChar = '\0';
             this.gtxtFolioEncuesta.SelectedText = "";
             this.gtxtFolioEncuesta.Size = new System.Drawing.Size(319, 34);
-            this.gtxtFolioEncuesta.TabIndex = 19;
+            this.gtxtFolioEncuesta.TabIndex = 6;
             // 
             // gtxtCurp
             // 
@@ -438,7 +439,7 @@
             this.gtxtCurp.PasswordChar = '\0';
             this.gtxtCurp.SelectedText = "";
             this.gtxtCurp.Size = new System.Drawing.Size(253, 34);
-            this.gtxtCurp.TabIndex = 20;
+            this.gtxtCurp.TabIndex = 5;
             // 
             // gtxtFolioAvisoCobro
             // 
@@ -456,7 +457,7 @@
             this.gtxtFolioAvisoCobro.PasswordChar = '\0';
             this.gtxtFolioAvisoCobro.SelectedText = "";
             this.gtxtFolioAvisoCobro.Size = new System.Drawing.Size(319, 34);
-            this.gtxtFolioAvisoCobro.TabIndex = 22;
+            this.gtxtFolioAvisoCobro.TabIndex = 4;
             // 
             // gunaLabel6
             // 
@@ -502,7 +503,7 @@
             this.gbtnGuardar.OnHoverImage = null;
             this.gbtnGuardar.OnPressedColor = System.Drawing.Color.Black;
             this.gbtnGuardar.Size = new System.Drawing.Size(125, 55);
-            this.gbtnGuardar.TabIndex = 31;
+            this.gbtnGuardar.TabIndex = 13;
             this.gbtnGuardar.Text = "Guardar";
             this.gbtnGuardar.Click += new System.EventHandler(this.gbtnGuardar_Click);
             // 
@@ -526,7 +527,7 @@
             this.gbtnActualizar.OnHoverImage = null;
             this.gbtnActualizar.OnPressedColor = System.Drawing.Color.Black;
             this.gbtnActualizar.Size = new System.Drawing.Size(125, 55);
-            this.gbtnActualizar.TabIndex = 32;
+            this.gbtnActualizar.TabIndex = 14;
             this.gbtnActualizar.Text = "Actualizar";
             this.gbtnActualizar.Click += new System.EventHandler(this.gbtnActualizar_Click);
             // 
@@ -550,7 +551,7 @@
             this.gbtnRegresar.OnHoverImage = null;
             this.gbtnRegresar.OnPressedColor = System.Drawing.Color.Black;
             this.gbtnRegresar.Size = new System.Drawing.Size(125, 55);
-            this.gbtnRegresar.TabIndex = 33;
+            this.gbtnRegresar.TabIndex = 15;
             this.gbtnRegresar.Text = "Regresar";
             this.gbtnRegresar.Click += new System.EventHandler(this.gbtnRegresar_Click);
             // 
@@ -637,7 +638,7 @@
             this.gtxtAviso.PasswordChar = '\0';
             this.gtxtAviso.SelectedText = "";
             this.gtxtAviso.Size = new System.Drawing.Size(253, 34);
-            this.gtxtAviso.TabIndex = 36;
+            this.gtxtAviso.TabIndex = 12;
             // 
             // gtxtCris
             // 
@@ -655,7 +656,7 @@
             this.gtxtCris.PasswordChar = '\0';
             this.gtxtCris.SelectedText = "";
             this.gtxtCris.Size = new System.Drawing.Size(199, 34);
-            this.gtxtCris.TabIndex = 35;
+            this.gtxtCris.TabIndex = 10;
             // 
             // gtxtNoti
             // 
@@ -673,7 +674,7 @@
             this.gtxtNoti.PasswordChar = '\0';
             this.gtxtNoti.SelectedText = "";
             this.gtxtNoti.Size = new System.Drawing.Size(225, 34);
-            this.gtxtNoti.TabIndex = 34;
+            this.gtxtNoti.TabIndex = 11;
             // 
             // gunaPanel3
             // 

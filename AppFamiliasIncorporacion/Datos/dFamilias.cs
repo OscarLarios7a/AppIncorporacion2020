@@ -126,6 +126,65 @@ namespace AppFamiliasIncorporacion.Datos
         }
 
         //Metodo para Eliminar Datos en la DB
+        public bool EliminarDB(lFamIncorporacion dtFamilia)
+        {
+            try
+            {
+                ConexionDB.open();
+                cnx = new SqlCommand("Eliminar_Familia", ConexionDB.sqlcnx);//aqui cargare los datos a traves de un procedimiento almacenado en la DB
+                cnx.CommandType = CommandType.StoredProcedure;
+                cnx.Parameters.AddWithValue("@IdIncorporacion", dtFamilia.idIncorporacion);
+                
+                if (cnx.ExecuteNonQuery() != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                ConexionDB.close();
+            }
+        }
         //Metodo para Buscar Datos en la DB
+        public DataTable BuscarDB(string parametro)
+        {
+            try
+            {
+                ConexionDB.open();
+                cnx = new SqlCommand("Buscar_Familia", ConexionDB.sqlcnx);
+                cnx.CommandType = CommandType.StoredProcedure;
+                cnx.Parameters.AddWithValue("@Buscar", parametro);
+                if (cnx.ExecuteNonQuery() != 0)
+                {
+                    DataTable dtFamilia = new DataTable();
+                    SqlDataAdapter daFamilia = new SqlDataAdapter(cnx);
+                    daFamilia.Fill(dtFamilia);
+                    return dtFamilia;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                ConexionDB.close();
+            }
+        }
     }
 }
